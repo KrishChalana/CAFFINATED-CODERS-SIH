@@ -334,8 +334,9 @@ export default function VideoUpload({ChangeScreen}) {
                     <div className="mt-2 space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="text-xs text-gray-500">Clear Time</div>
-                        <div className="font-semibold">{res.t_clear}</div>
+                        <div className="font-semibold">{res.t_clear[0]}</div>
                       </div>
+                      
                       <div className="flex items-center justify-between">
                         <div className="text-xs text-gray-500">Traffic Score</div>
                         <div className="font-semibold">{res.traffic_score}</div>

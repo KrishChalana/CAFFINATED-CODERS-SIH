@@ -30,6 +30,7 @@ def run_analysis(file_name, no_of_lanes, platoon_weight, incoming_distance, aver
     cps = calculate_cps(traffic_score, safety_penalty, green_wave_bonus)
 
     response = {
+        "summmary":summary,
         "file_name": file_name,
         "t_clear": t_clear,
         "traffic_score": traffic_score,
@@ -38,6 +39,8 @@ def run_analysis(file_name, no_of_lanes, platoon_weight, incoming_distance, aver
         "cps": cps,
         "frame_data": frame_data
     }
+
+    print(response)
 
     return response
 

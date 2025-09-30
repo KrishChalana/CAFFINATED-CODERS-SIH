@@ -1,0 +1,82 @@
+
+:root {
+  --primary-color: #3B82F6;
+  --doodle-border: 4px;
+  --doodle-radius: 1.5rem;
+}
+
+body {
+  font-family: 'Gaegu', cursive;
+}
+
+.font-numeric {
+  font-family: 'Comic Neue', cursive;
+}
+
+.doodle-border {
+  border: var(--doodle-border) solid #4a5568;
+  border-radius: var(--doodle-radius) calc(var(--doodle-radius) / 2);
+  /* The shadows are updated here */
+  box-shadow: 6px 6px 0px 0px #4a5568; 
+  transition: all 0.2s;
+}
+
+.doodle-border:hover {
+  transform: translate(-3px, -3px);
+  /* The shadows are updated here */
+  box-shadow: 9px 9px 0px 0px #4a5568;
+}
+
+.doodle-button {
+  border: var(--doodle-border) solid #2d3748;
+  border-radius: 2rem;
+  /* The shadows are updated here */
+  box-shadow: 4px 4px 0px 0px #2d3748;
+  transition: all 0.2s ease-in-out;
+}
+
+.doodle-button:hover {
+  transform: translate(-2px, -2px);
+  /* The shadows are updated here */
+  box-shadow: 7px 7px 0px 0px #2d3748;
+}
+
+.doodle-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #2d3748;
+}
+
+.doodle-select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>');
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.doodle-checkbox {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid #f59e0b;
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.doodle-checkbox:checked {
+  background-color: #f59e0b;
+}
+
+.doodle-checkbox:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+}
